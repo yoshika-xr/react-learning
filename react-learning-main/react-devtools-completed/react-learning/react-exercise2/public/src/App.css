@@ -1,0 +1,14 @@
+.card{
+  max-width:400px;
+  background-color: antiquewhite;
+  border:1px solid black;
+  border-radius:3%;
+  display: inline-block;
+  gap:20px;
+  padding:20px;
+  margin:10px;
+  text-align: center;
+}
+.card img{
+  height:200px;
+}
