@@ -16,3 +16,24 @@ function App() {
 }
 
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this command for running the json object
+// npx json-server --watch data/Dummydata.json --port 3000 --static ./data

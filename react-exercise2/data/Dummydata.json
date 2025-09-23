@@ -1,0 +1,35 @@
+{
+
+    "courses":[
+        {
+
+            "id": 1,
+            "img": "http://localhost:3000/assets/html.jpeg",
+            "name": "Html",
+            "price": 199,
+            "rate": "4"
+        },
+        {
+            "id": 2,
+            "img": "http://localhost:3000/assets/css.jpeg",
+            "name": "Css",
+            "price": 199,
+            "rate": "4.5"
+        },
+        {
+            "id": 3,
+            "img": "http://localhost:3000/assets/js.png",
+            "name": "JS",
+            "price": 299,
+            "rate": "4.8"
+        },
+        {
+            "id": 4,
+            "img": "http://localhost:3000/assets/js.png",
+            "name": "React JS",
+            "price": 999,
+            "rate": "4.8"
+        }
+    ]
+}
+

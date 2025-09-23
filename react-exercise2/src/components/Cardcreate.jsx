@@ -1,4 +1,4 @@
-import react, {useState } from "react";
+import react, { useState } from "react";
 
 
 function Cardcreate(props) {
@@ -9,6 +9,7 @@ function Cardcreate(props) {
        setpurchased(true);
        console.log(props.name,"prachased",discount, "%discount")
   }
+
   function Applydisc(amt) {
     setdiscount(discount-amt)
   }
