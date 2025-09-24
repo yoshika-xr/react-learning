@@ -1,36 +1,18 @@
-import react, { useState, useEffect } from "react";
+import react from "react";
 import Cardcreate from "./Cardcreate";
+import Usefetch from "./Usefetch";
 
 function Carddata() {
-  const [courses, setCourses] = useState(null);
-
-  const [Dummy, setDummy] = useState(true);
-
-  const [error,setError]=useState(null);
-  useEffect(() => {
-    console.log("runnning the useEffect");
-    console.log(Dummy);
-
-    fetch("http://localhost:3000/coursess")
-      .then((response) => {
-        if(!response.ok){
-          throw Error("can't retrive the data");
-        }
-        console.log(response);
-        return response.json();
-      })
-      .then((data) => setCourses(data))
-      .catch((error) => {
-        setError(error.message);
-      })
-  }, []);
+  const [courses,Dummy,error,setData]=Usefetch("http://localhost:3000/courses");
 
   function Deletefunc(id) {
     const newCourse = courses.filter((course) => course.id != id);
-    setCourses(newCourse);
+    setData(newCourse);
   }
-  if(!courses){
-    return <>{error}</>
+  if (!courses) {
+    return <>
+   {!error && <img src="data\assets\loadanim.gif"></img>}
+    {error && <h2> {error} </h2>}</>;
   }
   const courselist = courses.map((course) => (
     <Cardcreate
