@@ -1,8 +1,17 @@
+import { use, useState } from "react";
+
 function Login() {
+  const [pwd1, setPwd1] = useState("");
+  const [pwd2, setPwds2] = useState("");
+
+  function Handlepwd1(event){
+    setPwd1(event.target.value);
+    console.log(event.target.value);
+  }
   return (
-    <form>
+    <form style={{ width: "50%", margin: "auto", marginTop: "10%" }}>
       <div className="mb-3">
-        <label for="exampleInputEmail1" className="form-label">
+        <label className="form-label">
           Email address
         </label>
         <input
@@ -11,18 +20,27 @@ function Login() {
           id="exampleInputEmail1"
           aria-describedby="emailHelp"
         />
-        <div id="emailHelp" className="form-text">
-          We'll never share your email with anyone else.
-        </div>
       </div>
       <div className="mb-3">
-        <label for="exampleInputPassword1" className="form-label">
+        <label  className="form-label">
           Password
         </label>
         <input
+          value={pwd1}
+          onChange={Handlepwd1}
           type="password"
           className="form-control"
-          id="exampleInputPassword1"
+        />
+      </div>
+      <div className="mb-3">
+        <label  className="form-label">
+          RE-enter Password
+        </label>
+        <input
+          value={pwd2}
+          onChange={Handlepwd1}
+          type="password"
+          className="form-control"
         />
       </div>
       <div className="mb-3 form-check">
@@ -32,7 +50,7 @@ function Login() {
           id="exampleCheck1"
         />
         <label className="form-check-label" for="exampleCheck1">
-          Check me out
+          Accept
         </label>
       </div>
       <button type="submit" className="btn btn-primary">
