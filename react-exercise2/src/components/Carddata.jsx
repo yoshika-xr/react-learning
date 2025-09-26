@@ -1,9 +1,8 @@
-import react from "react";
 import Cardcreate from "./Cardcreate";
 import Usefetch from "./Usefetch";
 
 function Carddata() {
-  const [courses,Dummy,error,setData]=Usefetch("http://localhost:3000/courses");
+  const [courses,Dummy,error,setData,setDummy]=Usefetch("http://localhost:3000/courses");
 
   function Deletefunc(id) {
     const newCourse = courses.filter((course) => course.id != id);

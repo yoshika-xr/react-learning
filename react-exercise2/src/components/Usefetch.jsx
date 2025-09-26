@@ -1,4 +1,4 @@
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
  function Usefetch(url) {
   const [Data, setData] = useState(null);
 
@@ -25,6 +25,6 @@ import react, { useState, useEffect } from "react";
         });
     }, 1000);
   }, []);
-  return [Data,setData, error, Dummy];
+  return [Data,setData, error, Dummy],setDummy;
 };
 export default Usefetch;
