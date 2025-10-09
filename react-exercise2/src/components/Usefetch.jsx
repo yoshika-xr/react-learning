@@ -23,8 +23,8 @@ import { useState, useEffect } from "react";
         .catch((error) => {
           setError(error.message);
         });
-    }, 1000);
+    }, 2000);
   }, []);
-  return [Data,setData, error, Dummy],setDummy;
+  return [Data,setData, error, Dummy,setDummy];
 };
 export default Usefetch;
